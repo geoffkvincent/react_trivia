@@ -8,7 +8,7 @@ class App extends React.Component {
     return (
      <Container>
        <Switch>
-         <Route exact path='/react-trivia' component={GameBoard}/>
+         <Route exact path='/' component={GameBoard}/>
          <Route render={() => <h1 className='text-center'>Four oh Four.</h1>} />
        </Switch>
      </Container>
