@@ -13,7 +13,7 @@ class GameBoard extends React.Component {
 
   render() {
     return (
-      <Container>
+      <Container style={{padding: '20px'}}>
         <Categories/>
         <Category />
       </Container>

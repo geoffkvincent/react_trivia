@@ -11,16 +11,20 @@ class Categories extends React.Component {
     return (
       <Card.Group itemsPerRow={4}>
         <Card>
-          <Card.Content>React 101</Card.Content>
+          <Card.Content textAlign='center'>
+            <h2>React 101</h2>
+          </Card.Content>
         </Card>
         <Card>
-          <Card.Content>React es 2015</Card.Content>
+          <Card.Content textAlign='center'>
+            <h2>React es 2015</h2>
+          </Card.Content>
         </Card>
         <Card>
-          <Card.Content>React es6</Card.Content>
+          <Card.Content textAlign='center'>React es6</Card.Content>
         </Card>
         <Card>
-          <Card.Content>Advanced React</Card.Content>
+          <Card.Content textAlign='center'>Advanced React</Card.Content>
         </Card>
       </Card.Group>
     )
