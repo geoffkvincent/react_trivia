@@ -1,10 +1,13 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { getCats } from '../reducers/categories'
 import { Card } from 'semantic-ui-react'
 
 class Categories extends React.Component {
 
   componentDidMount() {
-
+    debugger
+    this.props.dispatch(getCats())
   }
 
   render() {
@@ -31,4 +34,9 @@ class Categories extends React.Component {
   }
 }
 
-export default Categories
+const mapStateToProps = (state) => {
+  debugger
+  return {cats: state.cats}
+}
+
+export default connect(mapStateToProps)(Categories)
