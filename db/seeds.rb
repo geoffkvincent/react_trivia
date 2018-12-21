@@ -14,7 +14,7 @@
       answer_c: Faker::Hacker.verb,
       answer_d: Faker::Hacker.abbreviation,
       correct_answer: @correct_ans_arr.sample,
-      points: @points_arr.sample
+      points: @points_arr.sample  
       )
   end
 end
