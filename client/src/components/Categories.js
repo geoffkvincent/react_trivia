@@ -2,15 +2,16 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { getCats } from '../reducers/categories'
 import { Card } from 'semantic-ui-react'
+import Category from './Category'
 
 class Categories extends React.Component {
 
   componentDidMount() {
-    debugger
     this.props.dispatch(getCats())
   }
 
   render() {
+    
     return (
       <Card.Group itemsPerRow={4}>
         <Card>
@@ -29,14 +30,14 @@ class Categories extends React.Component {
         <Card>
           <Card.Content textAlign='center'>Advanced React</Card.Content>
         </Card>
+        <Category />
       </Card.Group>
     )
   }
 }
 
 const mapStateToProps = (state) => {
-  debugger
-  return {cats: state.cats}
+  return { cats: state.categories }
 }
 
 export default connect(mapStateToProps)(Categories)
