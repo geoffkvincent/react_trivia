@@ -1,5 +1,6 @@
 import React from 'react'
-import { Card, Container } from 'semantic-ui-react'
+import Cards from './Card'
+import { Card, Container, Modal } from 'semantic-ui-react'
 
 class Category extends React.Component{
   render() {
@@ -7,7 +8,15 @@ class Category extends React.Component{
       <Container>
         <Card.Group itemsPerRow={4}>
           <Card>
-            <Card.Content textAlign='center'><h1>100</h1></Card.Content>
+            <Modal trigger={
+              <Card.Content textAlign='center'><h1>100</h1></Card.Content>
+            }>
+            <Modal.Content>
+              <Modal.Description>
+                <Cards/>
+              </Modal.Description>
+            </Modal.Content>
+            </Modal>
           </Card>
           <Card>
             <Card.Content textAlign='center'><h1>100</h1></Card.Content>
