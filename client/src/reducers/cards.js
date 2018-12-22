@@ -8,3 +8,12 @@ export const getCards = () => {
       .then( res => dispatch({ cards: res.data }))
   }
 }
+
+export default (state = [], action) => {
+  switch(action.type) {
+    case CARDS:
+      return action.cards
+    default:
+      return state
+  }
+}
