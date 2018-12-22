@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import
+import { getCards } from '../reducers/cards'
 import Cards from './Card'
 import { Card, Container, Modal } from 'semantic-ui-react'
 
