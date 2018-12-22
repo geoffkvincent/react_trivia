@@ -8,6 +8,7 @@ class Category extends React.Component {
   componentDidMount() {
     
   }
+
   render() {
     return (
       <Container>
