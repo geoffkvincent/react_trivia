@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Cards from './Card'
-import { Card, Container, Modal } from 'semantic-ui-react'
+import { Card, Container, Modal, } from 'semantic-ui-react'
 
 class Category extends React.Component{
   render() {

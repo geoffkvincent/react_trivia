@@ -10,27 +10,16 @@ class Categories extends React.Component {
     this.props.dispatch(getCats())
   }
 
-  render() {
-    
+  render() { 
     return (
       <Card.Group itemsPerRow={4}>
-        <Card>
+          {this.props.cats.map(cat =>
+        <Card key={cat.id}>
           <Card.Content textAlign='center'>
-            <h2>React 101</h2>
+            <h2>{cat.name}</h2>
           </Card.Content>
         </Card>
-        <Card>
-          <Card.Content textAlign='center'>
-            <h2>React es 2015</h2>
-          </Card.Content>
-        </Card>
-        <Card>
-          <Card.Content textAlign='center'>React es6</Card.Content>
-        </Card>
-        <Card>
-          <Card.Content textAlign='center'>Advanced React</Card.Content>
-        </Card>
-        <Category />
+        )}
       </Card.Group>
     )
   }
