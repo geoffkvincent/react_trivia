@@ -7,7 +7,8 @@ import { Card, Container, Modal } from 'semantic-ui-react'
 class Category extends React.Component {
 
   componentDidMount() {
-    this.props.dispatch(getCards())
+    const {catId} = this.props
+    this.props.dispatch(getCards(catId))
   }
 
   render() {
