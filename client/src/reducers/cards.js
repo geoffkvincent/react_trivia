@@ -2,4 +2,9 @@ import axios from 'axios'
 
 const CARDS = 'CARDS'
 
-export getCards
+export const getCards = () => {
+  return (dispatch) => {
+    axios.get(`/api/categories/${id}/cards`)
+      .then( res => dispatch({ cards: res.data }))
+  }
+}
