@@ -32,8 +32,8 @@ class Category extends React.Component {
   }
 }
 
-const mapStateToProps = () => {
-  
+const mapStateToProps = (state) => {
+  return { cards: state.cards }
 }
 
 export default connect(mapStateToProps)(Category)
