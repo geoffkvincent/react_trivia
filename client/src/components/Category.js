@@ -7,6 +7,7 @@ import { Card, Container, Modal } from 'semantic-ui-react'
 class Category extends React.Component {
 
   componentDidMount() {
+    debugger
     const {catId} = this.props
     this.props.dispatch(getCards(catId))
   }
@@ -33,6 +34,7 @@ class Category extends React.Component {
 }
 
 const mapStateToProps = (state) => {
+  debugger
   return { catId: state.categories.map( c => c.id) }
 }
 
