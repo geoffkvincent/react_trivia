@@ -18,7 +18,6 @@ class Categories extends React.Component {
           <Card.Content textAlign='center'>
             <h2>{cat.name}</h2>
           </Card.Content>
-         
         </Card>
         )}
       </Card.Group>
