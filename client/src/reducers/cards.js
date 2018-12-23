@@ -14,7 +14,6 @@ export const getCards = (id) => {
 export default (state = [], action) => {
   switch(action.type) {
     case CARDS:
-    debugger
       return action.cards
     default:
       return state
