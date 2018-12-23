@@ -7,7 +7,6 @@ export const getCards = (id) => {
   return (dispatch) => {
     axios.get(`/api/categories/${id}/cards`)
       .then( res => dispatch({ type: CARDS, cards: res.data }))
-      debugger
   }
 }
 
