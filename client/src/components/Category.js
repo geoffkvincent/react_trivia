@@ -33,7 +33,6 @@ class Category extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  debugger
   return { cards: state.cards }
 }
 
