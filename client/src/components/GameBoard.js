@@ -7,7 +7,6 @@ class GameBoard extends React.Component {
 
   renderGame = () => {
     return (
-      <div>
 
   render() {
     return (
