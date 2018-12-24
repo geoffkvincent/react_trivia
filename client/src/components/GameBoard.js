@@ -6,7 +6,6 @@ import Category from './Category'
 class GameBoard extends React.Component {
 
   renderGame = () => {
-    return (
 
   render() {
     return (
