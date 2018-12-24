@@ -30,4 +30,5 @@ const mapStateToProps = (state) => {
   return { cats: state.categories }
 }
 
+
 export default connect(mapStateToProps)(Categories)
