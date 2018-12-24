@@ -8,8 +8,8 @@ class Category extends React.Component {
 
   componentDidMount() {
     debugger
-    const {catId} = this.props
-    this.props.dispatch(getCards(catId))
+    const {id} = this.props
+    this.props.dispatch(getCards(id))
   }
 
   render() {
