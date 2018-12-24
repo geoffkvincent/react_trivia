@@ -5,7 +5,7 @@ import Category from './Category'
 
 class GameBoard extends React.Component {
 
-  render
+  
 
   render() {
     return (
