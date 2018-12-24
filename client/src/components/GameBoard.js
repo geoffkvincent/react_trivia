@@ -9,7 +9,7 @@ class GameBoard extends React.Component {
     return (
       <div></div>
     )
-  }
+  
 
   render() {
     return (
