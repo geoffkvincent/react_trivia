@@ -15,7 +15,7 @@ class Category extends React.Component {
     const { cards } = this.props
     return (
       <Container>
-        <Card.Group itemsPerRow={4}>
+        <Card.Group itemsPerRow={1}>
           { cards.map(card => 
           <Card key={card.id}>
             <Modal trigger={
@@ -27,10 +27,10 @@ class Category extends React.Component {
               <Modal.Description>
                 <ul>
                   <h1>{card.question}</h1>
-                  <li>{card.answer_a}</li>
-                  <li>{card.answer_b}</li>
-                  <li>{card.answer_c}</li>
-                  <li>{card.answer_d}</li>
+                  <li><h2>A:{card.answer_a}</h2></li>
+                  <li><h2>B:{card.answer_b}</h2></li>
+                  <li><h2>C:{card.answer_c}</h2></li>
+                  <li><h2>D:{card.answer_d}</h2></li>
                 </ul>
               </Modal.Description>
             </Modal.Content>
