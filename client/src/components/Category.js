@@ -13,10 +13,12 @@ class Category extends React.Component {
 
   handleClickA = () => {
     this.setState({ userAnswer: 'a' })
+    this.answerCheck()
   }
 
   handleClickB = () => {
     this.setState({ userAnswer: 'b' })
+    this.answerCheck()
   }
 
   handleClickC = () => {
