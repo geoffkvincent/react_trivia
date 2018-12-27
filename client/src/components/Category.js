@@ -26,6 +26,7 @@ class Category extends React.Component {
             <Modal.Content>
               <Modal.Description>
                 <ul>
+                  <h1>{card.question}</h1>
                   <li>{card.answer_a}</li>
                   <li>{card.answer_b}</li>
                   <li>{card.answer_c}</li>
