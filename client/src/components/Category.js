@@ -17,7 +17,7 @@ class Category extends React.Component {
       <Container>
         <Card.Group itemsPerRow={4}>
           { cards.map(card => 
-          <Card>
+          <Card key={card.id}>
             <Modal trigger={
               <Card.Content style={{cursor: "pointer"}} textAlign='center'>
                 <h1>{card.points}</h1>
@@ -25,7 +25,12 @@ class Category extends React.Component {
             }>
             <Modal.Content>
               <Modal.Description>
-                <GameCard {...cards}/>
+                <ul>
+                  <li>{card.answer_a}</li>
+                  <li>{card.answer_b}</li>
+                  <li>{card.answer_c}</li>
+                  <li>{card.answer_d}</li>
+                </ul>
               </Modal.Description>
             </Modal.Content>
             </Modal>
