@@ -1,8 +1,9 @@
 class Api::CardsController < ApplicationController
-  before_action set_category
-  before_action set_card, only: [:show, :update, :destroy]
+  before_action :set_category
+  before_action :set_card, only: [:show, :update, :destroy]
 
   def index
+    binding.pry
     render json: @category.cards
   end
 
@@ -35,10 +36,12 @@ class Api::CardsController < ApplicationController
   private
 
   def set_category
+    binding.pry
     @category = Category.find(params[:category_id])
   end
 
   def set_card
+    binding.pry
     @card = Card.find(params[:id])
   end
 
