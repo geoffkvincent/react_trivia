@@ -23,10 +23,12 @@ class Category extends React.Component {
 
   handleClickC = () => {
     this.setState({ userAnswer: 'c' })
+    this.answerCheck()
   }
 
   handleClickD = () => {
     this.setState({ userAnswer: 'd' })
+    this.answerCheck()
   }
 
   answerCheck = () => {
