@@ -19,7 +19,9 @@ class Category extends React.Component {
           { cards.map(card => 
           <Card>
             <Modal trigger={
-              <Card.Content textAlign='center'><h1>{card.points}</h1></Card.Content>
+              <Card.Content style={{cursor: "pointer"}} textAlign='center'>
+                <h1>{card.points}</h1>
+              </Card.Content>
             }>
             <Modal.Content>
               <Modal.Description>
@@ -28,7 +30,7 @@ class Category extends React.Component {
             </Modal.Content>
             </Modal>
           </Card>
-            )}
+          )}
         </Card.Group>
       </Container>
     )
