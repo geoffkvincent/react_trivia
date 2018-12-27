@@ -26,10 +26,10 @@ class Category extends React.Component {
               <Modal.Description>
                 <ul>
                   <h1>{card.question}</h1>
-                  <li><h2>A:{card.answer_a}</h2></li>
-                  <li><h2>B:{card.answer_b}</h2></li>
-                  <li><h2>C:{card.answer_c}</h2></li>
-                  <li><h2>D:{card.answer_d}</h2></li>
+                  <li><h2>A.{card.answer_a}</h2></li>
+                  <li><h2>B.{card.answer_b}</h2></li>
+                  <li><h2>C.{card.answer_c}</h2></li>
+                  <li><h2>D.{card.answer_d}</h2></li>
                 </ul>
               </Modal.Description>
             </Modal.Content>
