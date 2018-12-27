@@ -33,8 +33,8 @@ class Category extends React.Component {
   }
 }
 
-// const mapStateToProps = (state) => {
-//   return { catId: state.categories.map( c => c.id) }
-// }
+const mapStateToProps = (state) => {
+  return { catId: state.categories.map( c => c.id) }
+}
 
 export default connect()(Category)
