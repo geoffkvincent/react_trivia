@@ -4,20 +4,20 @@ import { getCards } from '../reducers/cards'
 import { Card, Container, Modal } from 'semantic-ui-react'
 
 class Category extends React.Component {
-  state = { userAnswer: '' }
+  state = { userAnswer: '', currentId: '' }
 
   componentDidMount() {
     const {id} = this.props
     this.props.dispatch(getCards(id))
   }
 
-  handleClickA = () => {
-    this.setState({ userAnswer: 'a' })
+  handleClickA = (id) => {
+    this.setState({ userAnswer: 'a', currentId: id })
     this.answerCheck()
   }
 
   handleClickB = () => {
-    this.setState({ userAnswer: 'b' })
+    this.setState({ userAnswer: 'b', currentId: })
     this.answerCheck()
   }
 
@@ -54,7 +54,7 @@ class Category extends React.Component {
                   <li>
                     <h2 
                       style={{cursor: "pointer"}} 
-                      onClick={this.handleClickA}
+                      onClick={() => this.handleClickA(card.id)}
                     >
                       A.{card.answer_a}
                     </h2>
