@@ -62,7 +62,7 @@ class Category extends React.Component {
                   <li>
                     <h2 
                       style={{cursor: "pointer"}} 
-                      onClick={this.handleClickB}
+                      onClick={() => this.handleClickB}
                     >
                       B.{card.answer_b}
                     </h2>
