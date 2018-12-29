@@ -18,9 +18,8 @@ class Category extends React.Component {
     if (check.correct_answer === check.userAnswer) {
       console.log('Winner')
     } else {
-
+      console.log('Loser')
     }
-    return check
   }
 
   handleClickB = (id) => {
