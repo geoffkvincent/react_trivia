@@ -12,7 +12,9 @@ class Category extends React.Component {
   }
 
   handleClickA = (id) => {
+    const
     this.setState({ userAnswer: 'a', currentId: id })
+    cards.find(card =>)
     this.answerCheck()
   }
 
