@@ -22,12 +22,12 @@ class Category extends React.Component {
   }
 
   handleClickC = (id) => {
-    this.setState({ userAnswer: 'c', current: id })
+    this.setState({ userAnswer: 'c', currentId: id })
     this.answerCheck()
   }
 
   handleClickD = (id) => {
-    this.setState({ userAnswer: 'd', current: id })
+    this.setState({ userAnswer: 'd', currentId: id })
     this.answerCheck()
   }
 
