@@ -33,9 +33,9 @@ class Category extends React.Component {
 
   answerCheck = () => {
     const {cards} = this.props
-    const {userAnswer,} = this.state
-    const check = cards.find(card => card.id === id)
-    if (check.correct_answer === check.userAnswer) {
+    const {userAnswer, currentId } = this.state
+    const check = cards.find(card => card.id === currentId)
+    if (check.correct_answer === userAnswer) {
       console.log('Winner')
     } else {
       console.log('Loser')
