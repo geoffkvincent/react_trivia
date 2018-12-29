@@ -15,7 +15,11 @@ class Category extends React.Component {
     const {cards} = this.props
     this.setState({ userAnswer: 'a', currentId: id })
     const check = cards.find(card => card.id === id)
-    debugger
+    if (check.correct_answer === check.userAnswer) {
+      console.log('Winner')
+    } else {
+
+    }
     return check
   }
 
