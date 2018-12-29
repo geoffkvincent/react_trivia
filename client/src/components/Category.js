@@ -14,9 +14,9 @@ class Category extends React.Component {
   handleClickA = (id) => {
     const {cards} = this.props
     this.setState({ userAnswer: 'a', currentId: id })
-    const check = cards.find(card => this.state.currentId === card.id)
-    return check
+    const check = cards.find(card => this.state.currentId)
     debugger
+    return check
   }
 
   handleClickB = (id) => {
