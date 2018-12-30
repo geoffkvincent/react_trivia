@@ -9,6 +9,20 @@ export const getCards = (id) => {
   }
 }
 
+answerCheck = () => {
+  debugger
+  const {cards} = this.props
+  const {userAnswer, currentId } = this.state
+  const check = cards.find(card => card.id === currentId)
+  debugger
+  if (check.correct_answer === userAnswer) {
+    debugger
+    console.log('Winner')
+  } else {
+    console.log('Loser')
+  }
+}
+
 export default (state = [], action) => {
   switch(action.type) {
     case CARDS:

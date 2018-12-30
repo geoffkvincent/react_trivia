@@ -14,11 +14,14 @@ class Category extends React.Component {
   handleClickA = (id) => {
     debugger
     this.setState({ userAnswer: 'a', currentId: id })
+    debugger
+    this.answerCheck()
   }
 
   handleClickB = (id) => {
     debugger
     this.setState({ userAnswer: 'b', currentId: id })
+    debugger
     this.answerCheck()
   }
 
