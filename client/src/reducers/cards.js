@@ -9,7 +9,7 @@ export const getCards = (id) => {
   }
 }
 
-answerCheck = () => {
+export const answerCheck = () => {
   debugger
   const {cards} = this.props
   const {userAnswer, currentId } = this.state
