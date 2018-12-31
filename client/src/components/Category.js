@@ -15,6 +15,16 @@ class Category extends React.Component {
     debugger
     this.setState({ userAnswer: 'a', currentId: id })
     debugger
+    const {cards} = this.props
+    const {userAnswer, currentId } = this.state
+    const check = cards.find(card => card.id === currentId)
+    debugger
+    if (check.correct_answer === userAnswer) {
+      debugger
+      console.log('Winner')
+    } else {
+      console.log('Loser')
+    }
   }
 
   handleClickB = (id) => {
@@ -25,13 +35,15 @@ class Category extends React.Component {
 
   handleClickC = (id) => {
     this.setState({ userAnswer: 'c', currentId: id })
+    this.answerCheck()
   }
 
   handleClickD = (id) => {
     this.setState({ userAnswer: 'd', currentId: id })
+    this.answerCheck()
   }
 
-  componentDidUpdate() {
+  answerCheck = () => {
     debugger
     const {cards} = this.props
     const {userAnswer, currentId } = this.state
