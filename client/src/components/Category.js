@@ -25,7 +25,6 @@ class Category extends React.Component {
 
   handleClickC = (id) => {
     this.setState({ userAnswer: 'c', currentId: id })
-    this.answerCheck()
   }
 
   handleClickD = (id) => {
