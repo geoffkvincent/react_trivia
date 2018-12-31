@@ -15,13 +15,9 @@ class Category extends React.Component {
   handleClickA = (id) => {
     const {cards} = this.props
     const {userAnswer, currentId } = this.state
-    debugger
     this.setState({ userAnswer: 'a', currentId: id })
-    debugger
     const check = cards.find(card => card.id === currentId)
-    debugger
     if (check.correct_answer === userAnswer) {
-      debugger
       console.log('Winner')
     } else {
       console.log('Loser')
@@ -31,17 +27,7 @@ class Category extends React.Component {
   handleClickB = (id) => {
     debugger
     this.setState({ userAnswer: 'b', currentId: id })
-    debugger
-    const {cards} = this.props
-    const {userAnswer, currentId } = this.state
-    const check = cards.find(card => card.id === currentId)
-    debugger
-    if (check.correct_answer === userAnswer) {
-      debugger
-      console.log('Winner')
-    } else {
-      console.log('Loser')
-    }
+    
   }
 
   handleClickC = (id) => {
