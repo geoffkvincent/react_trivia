@@ -35,7 +35,7 @@ class Category extends React.Component {
     this.answerCheck()
   }
 
-  answerCheck = () => {
+  componentDidUpdate() {
     debugger
     const {cards} = this.props
     const {userAnswer, currentId } = this.state
