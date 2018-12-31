@@ -31,11 +31,20 @@ class Category extends React.Component {
     debugger
     this.setState({ userAnswer: 'b', currentId: id })
     debugger
+    const {cards} = this.props
+    const {userAnswer, currentId } = this.state
+    const check = cards.find(card => card.id === currentId)
+    debugger
+    if (check.correct_answer === userAnswer) {
+      debugger
+      console.log('Winner')
+    } else {
+      console.log('Loser')
+    }
   }
 
   handleClickC = (id) => {
     this.setState({ userAnswer: 'c', currentId: id })
-    this.answerCheck()
   }
 
   handleClickD = (id) => {
