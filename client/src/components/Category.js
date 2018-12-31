@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { getCards } from '../reducers/cards'
-import CardAnswer from './CardAnswer'
 import { Card, Container, Modal } from 'semantic-ui-react'
 
 class Category extends React.Component {
