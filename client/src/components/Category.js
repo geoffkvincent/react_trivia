@@ -4,7 +4,7 @@ import { getCards } from '../reducers/cards'
 import { Card, Container, Modal } from 'semantic-ui-react'
 
 class Category extends React.Component {
-  state = { userAnswer: '', currentId: '' }
+  state = { userAnswer: '', currentId: '', open: false }
 
   componentDidMount() {
     const {id} = this.props
@@ -48,7 +48,10 @@ class Category extends React.Component {
     } else {
       console.log('Loser')
     }
+
   }
+
+  
 
   render() {
     const { cards } = this.props
@@ -57,11 +60,14 @@ class Category extends React.Component {
         <Card.Group itemsPerRow={1}>
           { cards.map(card => 
           <Card key={card.id}>
-            <Modal trigger={
-              <Card.Content style={{cursor: "pointer"}} textAlign='center'>
-                <h1>{card.points}</h1>
-              </Card.Content>
-            }>
+            <Modal 
+              trigger={
+                <Card.Content style={{cursor: "pointer"}} textAlign='center'>
+                  <h1>{card.points}</h1>
+                </Card.Content>
+              }
+              
+            >
             <Modal.Content>
               <Modal.Description>
                 <ul>
