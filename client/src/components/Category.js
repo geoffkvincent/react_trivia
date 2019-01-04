@@ -44,7 +44,7 @@ class Category extends React.Component {
     } else {
       console.log('Loser')
     }
-    this.close()
+    return this.close
   }
 
   open = () => this.setState({ open: true })
@@ -64,9 +64,9 @@ class Category extends React.Component {
                   <h1>{card.points}</h1>
                 </Card.Content>
               }
+              open={this.state.open}
               onOpen={this.open}
               onClose={this.close}
-              open={this.state.open}
             >
             <Modal.Content>
               <Modal.Description>
