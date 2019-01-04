@@ -66,6 +66,7 @@ class Category extends React.Component {
               }
               onOpen={this.open}
               onClose={this.close}
+              open={this.state.open}
             >
             <Modal.Content>
               <Modal.Description>
