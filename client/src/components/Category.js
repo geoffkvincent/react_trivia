@@ -18,7 +18,6 @@ class Category extends React.Component {
   }
 
   handleClickB = (id) => {
-    debugger
     this.setState({ userAnswer: 'b', currentId: id }, () => {
       this.answerCheck()
     })
@@ -37,21 +36,18 @@ class Category extends React.Component {
   }
 
   answerCheck = () => {
-    debugger
     const {cards} = this.props
     const {userAnswer, currentId } = this.state
     const check = cards.find(card => card.id === currentId)
-    debugger
     if (check.correct_answer === userAnswer) {
-      debugger
       console.log('Winner')
     } else {
       console.log('Loser')
     }
-
+    this.close()
   }
 
-  
+  close = () => this.setState({ open: false })
 
   render() {
     const { cards } = this.props
@@ -66,7 +62,8 @@ class Category extends React.Component {
                   <h1>{card.points}</h1>
                 </Card.Content>
               }
-              
+              open={this.state.open}
+              onClose={this.close()}
             >
             <Modal.Content>
               <Modal.Description>
