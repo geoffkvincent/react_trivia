@@ -1,7 +1,6 @@
 @cat_arr = ['React-101', 'Advanced React', 'ES 2015', 'ES6']
 @correct_ans_arr = ['a', 'b', 'c', 'd']
 @points_arr = ['100', '200', '300', '400', '500']
-@card = 
 
 @cat_arr.each do |cat|
   c = Category.create(
@@ -15,8 +14,9 @@
       answer_c: Faker::Hacker.verb,
       answer_d: Faker::Hacker.abbreviation,
       correct_answer: @correct_ans_arr.sample,
-      @points_arr.each do |p| 
-        points: p
+      @points_arr.each do |point|
+        c.cards.points: point
+      end
       )
   end
 end
