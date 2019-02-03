@@ -64,7 +64,7 @@ class Category extends React.Component {
                   <h1>{card.points}</h1>
                 </Card.Content>
               }
-              open={this.state.open}
+              // open={this.state.open}
               onOpen={this.open}
               onClose={this.close}
             >
