@@ -49,7 +49,7 @@ class Category extends React.Component {
 
   open = () => this.setState({ open: true })
 
-  close = () => this.setState({ open: false, userAnswer: '', currentId })
+  close = () => this.setState({ open: false, userAnswer: '', currentId: '' })
 
   render() {
     const { cards } = this.props
