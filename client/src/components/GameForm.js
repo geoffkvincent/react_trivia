@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Form } from 'semantic-ui-react'
 
 class GameForm extends React.Component {
-  state = { name: '', showForm: false }
+  state = { name: '' }
 
   handleChange = ({ target: { name, value } }) => {
     this.setState({ [name]: value })
