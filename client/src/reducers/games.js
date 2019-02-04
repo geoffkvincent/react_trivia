@@ -29,7 +29,7 @@ export const updateGame = (game) => {
 export const deleteGame = (id) => {
   return (dispatch) => {
     axios.get(`/api/games/${id}`)
-    .then( ({data}) => dispatch({ type: DELETE_GAME, id }))
+    .then( () => dispatch({ type: DELETE_GAME, id }))
   }
 }
 
