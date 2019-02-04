@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 import { addGame } from '../reducers/games'
 import { Form } from 'semantic-ui-react'
 
@@ -16,6 +17,7 @@ class GameForm extends React.Component {
     const { name } = this.state
     const game = { name, }
     dispatch(addGame(game))
+    return <Redirect to="/game" />
   }
 
   render() {
