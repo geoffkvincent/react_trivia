@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { addGame } from '../reducers/games'
 import { Form } from 'semantic-ui-react'
 
 class GameForm extends React.Component {
@@ -11,6 +12,10 @@ class GameForm extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
+    const { dispatch } = this.props
+    const { name } = this.state
+    const game = { name, }
+    dispatch(addGame(game))
   }
 
   render() {
