@@ -1,11 +1,12 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { Form } from 'semantic-ui-react'
 
 class GameForm extends React.Component {
-  state = { name: '' }
+  state = { name: '', showForm: false }
 
-  handleChange = (e) => {
-
+  handleChange = ({ target: { name, value } }) => {
+    this.setState({ [name]: value })
   }
 
   handleSubmit = (e) => {
@@ -13,12 +14,19 @@ class GameForm extends React.Component {
   }
 
   render() {
+    const { name } = this.state
     return (
-      <Form>
-
+      <Form onSubmit={this.handelSubmit}>
+        <Form.Input
+          name='name'
+          placeholder='Name'
+          label='Game Name'
+          value={name}
+          onChange={this.handleChange}
+        />
       </Form>
     )
   }
 }
 
-export default GameForm
+export default connect()(GameForm)
