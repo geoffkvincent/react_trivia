@@ -15,21 +15,21 @@ export const getGames = () => {
 export const addGame = (game) => {
   debugger
   return (dispatch) => {
-    axios.get('/api/games', {game} )
+    axios.post('/api/games', {game} )
     .then( ({data}) => dispatch({ type: ADD_GAME, game: data }))
   }
 }
 
 export const updateGame = (game) => {
   return (dispatch) => {
-    axios.get(`/api/games/${game.id}`, {game} )
+    axios.put(`/api/games/${game.id}`, {game} )
     .then( ({data}) => dispatch({ type: UPDATE_GAME, game: data }))
   }
 }
 
 export const deleteGame = (id) => {
   return (dispatch) => {
-    axios.get(`/api/games/${id}`)
+    axios.delete(`/api/games/${id}`)
     .then( () => dispatch({ type: DELETE_GAME, id }))
   }
 }
