@@ -12,6 +12,7 @@ class GameForm extends React.Component {
   }
 
   handleSubmit = (e) => {
+    debugger
     e.preventDefault()
     const { dispatch } = this.props
     const { name } = this.state
@@ -23,7 +24,7 @@ class GameForm extends React.Component {
   render() {
     const { name } = this.state
     return (
-      <Form onSubmit={this.handelSubmit}>
+      <Form onSubmit={this.handleSubmit}>
         <Form.Input
           name='name'
           placeholder='Name'
