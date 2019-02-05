@@ -17,7 +17,7 @@ class GameForm extends React.Component {
     const { name } = this.state
     const game = { name, }
     dispatch(addGame(game))
-    return <Redirect to="/game" />
+    // return <Redirect to="/game" />
   }
 
   render() {
@@ -31,6 +31,7 @@ class GameForm extends React.Component {
           value={name}
           onChange={this.handleChange}
         />
+        <Form.Button>Submit</Form.Button>
       </Form>
     )
   }

@@ -13,6 +13,7 @@ export const getGames = () => {
 }
 
 export const addGame = (game) => {
+  debugger
   return (dispatch) => {
     axios.get('/api/games', {game} )
     .then( ({data}) => dispatch({ type: ADD_GAME, game: data }))
