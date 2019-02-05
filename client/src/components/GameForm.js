@@ -21,7 +21,7 @@ class GameForm extends React.Component {
   }
 
   render() {
-    const { name } = this.state
+    const { name, fireRedirect } = this.state
     return (
       <Fragment>
         <Form onSubmit={this.handleSubmit}>
@@ -34,6 +34,7 @@ class GameForm extends React.Component {
             />
           <Form.Button>Submit</Form.Button>
         </Form>
+        { fireRedirect ? <Redirect to='/game'/> : null }
       </Fragment>
     )
   }
