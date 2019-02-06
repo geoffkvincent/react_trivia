@@ -10,7 +10,7 @@ class App extends React.Component {
      <Container>
        <Switch>
          <Route exact path= '/' component={Home} />
-         <Route exact path='/game' component={GameBoard}/>
+         <Route exact path='/api/game/:id' component={GameBoard}/>
          <Route render={() => <h1 className='text-center'>Four oh Four.</h1>} />
        </Switch>
      </Container>

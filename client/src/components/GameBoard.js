@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { getGame } from '../reducers/games'
 import { Container, Header } from 'semantic-ui-react'
 import Categories from './Categories'
 
@@ -17,4 +18,4 @@ class GameBoard extends React.Component {
   }
 } 
 
-export default GameBoard
+export default connect()(GameBoard)
