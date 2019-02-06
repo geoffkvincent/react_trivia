@@ -34,7 +34,7 @@ class GameForm extends React.Component {
             />
           <Form.Button>Submit</Form.Button>
         </Form>
-        { fireRedirect ? <Redirect to={`/game/${id}`}/> : null }
+        { fireRedirect ? <Redirect to='/game'/> : null }
       </Fragment>
     )
   }

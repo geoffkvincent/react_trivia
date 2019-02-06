@@ -12,8 +12,6 @@ export const getGames = () => {
   }
 }
 
-
-
 export const addGame = (game) => {
   return (dispatch) => {
     axios.post('/api/games', {game} )
