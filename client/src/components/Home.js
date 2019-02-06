@@ -36,4 +36,8 @@ class Home extends React.Component {
   }
 }
 
-export default Home
+const mapStateToProps = (state) => {
+  return {games: state.games}
+}
+
+export default connect(mapStateToProps)(Home)
