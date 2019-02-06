@@ -7,17 +7,21 @@ import styled from 'styled-components'
 class Home extends React.Component {
   state = { showForm: false }
 
+  compone
+
   toggleForm = () => this.setState({ showForm: !this.state.showForm})
 
   renderGames = () => {
+    const {games} = this.props
     return (
       <div>
-        {}
-        <Card>
-          <Card.Content>
-
-          </Card.Content>
-        </Card>
+        {games.map(game => 
+          <Card key={game.id}>
+            <Card.Content>
+              <Card.Header>{game.name}</Card.Header>
+            </Card.Content>
+          </Card>
+        )}
       </div>
     )
   }
