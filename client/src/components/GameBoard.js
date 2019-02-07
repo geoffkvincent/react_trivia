@@ -17,8 +17,8 @@ class GameBoard extends React.Component {
   }
 } 
 
-const mapStateToProps = () => {
-  
+const mapStateToProps = (state, props) => {
+  return { game: state.games.find( g =>)}
 }
 
 export default connect(mapStateToProps)(GameBoard)
