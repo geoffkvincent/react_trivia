@@ -22,7 +22,7 @@ class Home extends React.Component {
         {games.map(game => 
           <Card key={game.id}>
             <Card.Content>
-              <Link to={{ pathname: `/api/games/${game.id}`, state: game.name }}>
+              <Link to={`/games/${game.id}`}>
                 <Card.Header>{game.name}</Card.Header>
               </Link>
             </Card.Content>
