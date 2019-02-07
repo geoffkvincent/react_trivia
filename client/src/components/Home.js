@@ -38,6 +38,7 @@ class Home extends React.Component {
           Create Game
         </Button>
         { showForm ? <GameForm /> : null }
+        { this.renderGames() }
       </Container>
     )
   }
