@@ -6,9 +6,10 @@ import Categories from './Categories'
 class GameBoard extends React.Component {
 
   render() {
+    const { game } = this.props
     return (
       <>
-      <Header as='h1' textAlign='center'>Trivia</Header>
+      <Header as='h1' textAlign='center'>{game.name}</Header>
       <Container style={{padding: '20px', borderStyle: 'solid'}}>
         <Categories/>
       </Container>
