@@ -18,7 +18,7 @@ class GameBoard extends React.Component {
 } 
 
 const mapStateToProps = (state, props) => {
-  return { game: state.games.find( g =>)}
+  return { game: state.games.find( g => g.id === parseInt(props.match.params.id))}
 }
 
 export default connect(mapStateToProps)(GameBoard)
