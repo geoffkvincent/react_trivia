@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import { Link } from 'react-router-dom'
 import { getGames } from '../reducers/games'
 import { Container, Header, Card, Button } from 'semantic-ui-react'
 import GameForm from './GameForm'
@@ -21,7 +22,9 @@ class Home extends React.Component {
         {games.map(game => 
           <Card key={game.id}>
             <Card.Content>
-              <Card.Header>{game.name}</Card.Header>
+              <Link to={{ pathname: `/api/games/${game.id}`, state: game.name }}>
+                <Card.Header>{game.name}</Card.Header>
+              </Link>
             </Card.Content>
           </Card>
         )}
