@@ -5,10 +5,13 @@ const ADD_GAME = 'ADD_GAME'
 const UPDATE_GAME = 'UPDATE_GAME'
 const DELETE_GAME = 'DELETE_GAME'
 
-export const getGames = () => {
+export const getGames = (cb) => {
   return (dispatch) => {
     axios.get('/api/games')
-    .then( ({data}) => dispatch({ type: GAMES, games: data }))
+    .then( ({data}) => {
+      dispatch({ type: GAMES, games: data })
+      cb()
+    })
   }
 }
 
