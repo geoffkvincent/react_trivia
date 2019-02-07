@@ -6,6 +6,7 @@ const UPDATE_GAME = 'UPDATE_GAME'
 const DELETE_GAME = 'DELETE_GAME'
 
 export const getGames = (cb) => {
+  debugger
   return (dispatch) => {
     axios.get('/api/games')
     .then( ({data}) => {
