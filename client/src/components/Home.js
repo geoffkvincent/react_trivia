@@ -17,7 +17,7 @@ class Home extends React.Component {
   renderGames = () => {
     const {games} = this.props
     return (
-      <Card.Group>
+      <Card.Group centered>
         {games.map(game => 
           <Card key={game.id}>
             <Card.Content>
