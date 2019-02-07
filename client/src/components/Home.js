@@ -17,7 +17,7 @@ class Home extends React.Component {
   renderGames = () => {
     const {games} = this.props
     return (
-      <div>
+      <Card.Group>
         {games.map(game => 
           <Card key={game.id}>
             <Card.Content>
@@ -25,7 +25,7 @@ class Home extends React.Component {
             </Card.Content>
           </Card>
         )}
-      </div>
+      </Card.Group>
     )
   }
 
@@ -33,7 +33,7 @@ class Home extends React.Component {
     const { showForm } = this.state
     return (
       <Container>
-        <Header as='h1' textAlign='center'>React Trivia</Header>
+        <Header as='h1' textAlign='center'>Jeaparody</Header>
         <Button onClick={this.toggleForm}>
           Create Game
         </Button>
