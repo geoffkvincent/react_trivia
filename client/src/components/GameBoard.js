@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Container, Header } from 'semantic-ui-react'
 import Categories from './Categories'
+import CatForm from './CatForm'
 
 class GameBoard extends React.Component {
   state = {renderCatForm: false}
@@ -20,16 +21,23 @@ class GameBoard extends React.Component {
     return (
       <>
       <Header as='h1' textAlign='center'>{game.name}</Header>
+      { renderCatForm ? <CatForm /> 
+      : 
       <Container style={{padding: '20px', borderStyle: 'solid'}}>
-        {renderCatForm ? <CatForm /> : <Categories />}
+        <Categories /> 
       </Container>
+      }
       </>
     )
   }
 } 
 
 const mapStateToProps = (state, props) => {
-  return { game: state.games.find( g => g.id === parseInt(props.match.params.id))}
+  return { 
+    game: state.games.find( g => g.id === parseInt(props.match.params.id)),
+    cats: state.cats
+  }
 }
+
 
 export default connect(mapStateToProps)(GameBoard)

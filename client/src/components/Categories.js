@@ -11,13 +11,9 @@ class Categories extends React.Component {
   }
 
   render() { 
-    const {cats} = this.props
-    if (cats.length <= 0) {
-      return
-    } 
     return (
       <Card.Group itemsPerRow={4}>
-        {cats.map(cat =>
+        {this.props.cats.map(cat =>
         <Card key={cat.id}>
           <Card.Content textAlign='center'>
             <h2>{cat.name}</h2>
