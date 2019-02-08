@@ -4,7 +4,12 @@ import { getCards } from '../reducers/cards'
 import { Card, Container, Modal } from 'semantic-ui-react'
 
 class Category extends React.Component {
-  state = { userAnswer: '', currentId: '', open: false }
+  state = { 
+    userAnswer: '', 
+    currentId: '', 
+    open: false 
+    
+  }
 
   componentDidMount() {
     const {id} = this.props

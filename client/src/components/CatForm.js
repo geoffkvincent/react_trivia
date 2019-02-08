@@ -14,7 +14,7 @@ class CatForm extends React.Component {
     e.preventDefault()
     const { dispatch, gameId } = this.props
     const { cat1, cat2, cat3, cat4 } = this.state
-    const allCats = {cat1, cat2, cat3, cat4}
+    const allCats = [{name: cat1}, {name : cat2}, {name: cat3}, {name: cat4}]
     dispatch(addCat(gameId, allCats))
     this.setState({ cat1: '', cat2: '', cat3: '', cat4: '' })
   }

@@ -2,6 +2,7 @@ import React from 'react'
 import Home from './Home'
 import GameBoard from './GameBoard'
 import { getGames } from '../reducers/games'
+import { getCats } from '../reducers/cateogries'
 import { Switch, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { Loader, Segment, Dimmer, Container } from 'semantic-ui-react'
@@ -11,6 +12,7 @@ class FetchGame extends React.Component {
 
   componentDidMount() {
     this.props.dispatch(getGames(this.setLoaded))
+    this.props.dispatch(getCats(this.setLoaded))
   }
 
   setLoaded = () => this.setState({loaded: true})

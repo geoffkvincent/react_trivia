@@ -5,8 +5,6 @@ import Category from './Category'
 
 class Categories extends React.Component {
 
-  
-
   render() { 
     return (
       <Card.Group itemsPerRow={4}>

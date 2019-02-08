@@ -10,11 +10,12 @@ export const getCats = () => {
   }
 }
 
-export const addCat = (id, cat) => {
-  debugger
+export const addCat = (id, cats) => {
   return (dispatch) => {
-    axios.post(`/api/games/${id}/categories`, {cat} )
+    for ( let i = 0 ; i < cats.length ; i++) {
+      axios.post(`/api/games/${id}/categories`, cats[i] )
     .then( ({data}) => dispatch({ type: ADD_CAT, cat: data }))
+    }
   }
 }
 

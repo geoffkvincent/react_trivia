@@ -10,12 +10,13 @@ class Api::CategoriesController < ApplicationController
   end
 
   def create
-    category = Category.new(category_params)
+    game = Game.find(params[:game_id])
+    category = game.categories.new(category_params)
 
     if category.save
       render json: category
     else
-      render json: {errors: category.errors}
+      render json: category.errors, status: 422
     end
   end
 

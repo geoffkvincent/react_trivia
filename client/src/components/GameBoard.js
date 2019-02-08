@@ -30,7 +30,7 @@ class GameBoard extends React.Component {
       { renderCatForm ? <CatForm gameId={game.id}/> 
       : 
       <Container style={{padding: '20px', borderStyle: 'solid'}}>
-        <Categories /> 
+        <Categories cats={this.props.cats}/> 
       </Container>
       }
       </>
