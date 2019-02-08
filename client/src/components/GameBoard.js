@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Container, Header } from 'semantic-ui-react'
+import { getCats } from '../reducers/categories'
 import Categories from './Categories'
 import CatForm from './CatForm'
 
@@ -8,6 +9,11 @@ class GameBoard extends React.Component {
   state = {renderCatForm: false}
 
   componentDidMount() {
+    this.props.dispatch(getCats())
+    this.renderCat()
+  }
+  
+  renderCat = () => {
     if (this.props.cats.length <= 0) {
       this.setState({renderCatForm: true})
     } else {
@@ -35,7 +41,7 @@ class GameBoard extends React.Component {
 const mapStateToProps = (state, props) => {
   return { 
     game: state.games.find( g => g.id === parseInt(props.match.params.id)),
-    cats: state.cats
+    cats: state.categories
   }
 }
 
