@@ -16,11 +16,11 @@ class GameForm extends React.Component {
     const { name } = this.state
     const game = { name, }
     dispatch(addGame(game))
-    this.setState({ name: '', fireRedirect: !this.state.fireRedirect})
+    this.setState({ name: '' })
   }
 
   render() {
-    const { name, fireRedirect } = this.state
+    const { name } = this.state
     return (
       <Fragment>
         <Form onSubmit={this.handleSubmit}>
