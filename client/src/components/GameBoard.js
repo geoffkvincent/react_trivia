@@ -27,7 +27,7 @@ class GameBoard extends React.Component {
     return (
       <>
       <Header as='h1' textAlign='center'>{game.name}</Header>
-      { renderCatForm ? <CatForm /> 
+      { renderCatForm ? <CatForm gameId={game.id}/> 
       : 
       <Container style={{padding: '20px', borderStyle: 'solid'}}>
         <Categories /> 

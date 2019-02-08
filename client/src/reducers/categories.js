@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 const CATS = 'CATS'
+const ADD_CAT = 'ADD_CAT'
 
 export const getCats = () => {
   return (dispatch) => {
@@ -9,10 +10,20 @@ export const getCats = () => {
   }
 }
 
+export const addCat = (id, cat) => {
+  debugger
+  return (dispatch) => {
+    axios.post(`/api/games/${id}/categories`, {cat} )
+    .then( ({data}) => dispatch({ type: ADD_CAT, cat: data }))
+  }
+}
+
 export default (state = [], action) => {
   switch(action.type) {
     case CATS:
       return action.cats
+    case ADD_CAT:
+      return [action.game, ...state]
     default:
       return state
   }
