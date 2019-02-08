@@ -1,11 +1,10 @@
 import React, {Fragment} from 'react'
 import { connect } from 'react-redux'
-import { Redirect, withRouter } from 'react-router-dom'
 import { addGame } from '../reducers/games'
 import { Form } from 'semantic-ui-react'
 
 class GameForm extends React.Component {
-  state = { name: '', fireRedirect: false }
+  state = { name: '', }
 
   handleChange = ({ target: { name, value } }) => {
     this.setState({ [name]: value })
@@ -34,7 +33,6 @@ class GameForm extends React.Component {
             />
           <Form.Button>Submit</Form.Button>
         </Form>
-        { fireRedirect ? <Redirect to='/game'/> : null }
       </Fragment>
     )
   }

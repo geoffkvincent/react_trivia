@@ -10,7 +10,6 @@ class FetchGame extends React.Component {
   state = { loaded: false }
 
   componentDidMount() {
-    debugger
     this.props.dispatch(getGames(this.setLoaded))
   }
 
