@@ -17,6 +17,7 @@ class GameForm extends React.Component {
     const game = { name, }
     dispatch(addGame(game))
     this.setState({ name: '' })
+    this.toggleForm()
   }
 
   render() {

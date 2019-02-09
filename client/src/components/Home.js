@@ -34,7 +34,7 @@ class Home extends React.Component {
         <Button  fluid  color={'purple'} onClick={this.toggleForm}>
           Create Game
         </Button>
-        { showForm ? <GameForm /> : null }
+        { showForm ? <GameForm togglForm={this.toggleForm}/> : null }
         { this.renderGames() }
       </Container>
     )
