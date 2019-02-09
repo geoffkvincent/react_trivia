@@ -16,6 +16,7 @@ export const getGames = (cb) => {
 }
 
 export const addGame = (game) => {
+  debugger
   return (dispatch) => {
     axios.post('/api/games', {game} )
     .then( ({data}) => dispatch({ type: ADD_GAME, game: data }))
@@ -42,6 +43,7 @@ export default ( state = [], action) => {
     case GAMES:
       return action.games
     case ADD_GAME:
+    debugger
       return [action.game, ...state]
     case UPDATE_GAME:
       return state.map( g => {
