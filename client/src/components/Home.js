@@ -32,9 +32,9 @@ class Home extends React.Component {
       <Container>
         <Header as='h1' textAlign='center'>Jeaparody</Header>
         <Button  fluid  color={'purple'} onClick={this.toggleForm}>
-          Create Game
+          { showForm ? 'Cancel' : 'Create Game'}
         </Button>
-        { showForm ? <GameForm togglForm={this.toggleForm}/> : null }
+        { showForm ? <GameForm toggleForm={this.toggleForm}/> : null }
         { this.renderGames() }
       </Container>
     )

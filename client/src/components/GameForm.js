@@ -17,7 +17,7 @@ class GameForm extends React.Component {
     const game = { name, }
     dispatch(addGame(game))
     this.setState({ name: '' })
-    this.toggleForm()
+    this.props.toggleForm()
   }
 
   render() {
@@ -31,6 +31,7 @@ class GameForm extends React.Component {
             label='Game Name'
             value={name}
             onChange={this.handleChange}
+            required
             />
           <Form.Button>Submit</Form.Button>
         </Form>
