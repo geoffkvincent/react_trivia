@@ -30,6 +30,7 @@ export const updateGame = (game) => {
 }
 
 export const deleteGame = (id) => {
+  debugger
   return (dispatch) => {
     axios.delete(`/api/games/${id}`)
     .then( () => dispatch({ type: DELETE_GAME, id }))

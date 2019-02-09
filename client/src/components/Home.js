@@ -11,7 +11,7 @@ class Home extends React.Component {
   toggleForm = () => this.setState({ showForm: !this.state.showForm})
 
   renderGames = () => {
-    const { games, deleteGame } = this.props
+    const { games } = this.props
     return (
       <Card.Group centered style={{padding: '10px'}}>
         {games.map(game => 
@@ -23,7 +23,8 @@ class Home extends React.Component {
             </Card.Content>
             <Card.Content extra>
               <Icon 
-                name='Trash'
+                name='trash'
+                style={{ cursor: 'pointer'}}
                 onClick={ () => deleteGame(game.id)}
               />
             </Card.Content>
