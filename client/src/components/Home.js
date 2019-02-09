@@ -1,7 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {deleteGame} from '../reducers/games'
 import { Link } from 'react-router-dom'
-import { Container, Header, Card, Button } from 'semantic-ui-react'
+import { Container, Header, Card, Button, Icon } from 'semantic-ui-react'
 import GameForm from './GameForm'
 
 class Home extends React.Component {
@@ -10,7 +11,7 @@ class Home extends React.Component {
   toggleForm = () => this.setState({ showForm: !this.state.showForm})
 
   renderGames = () => {
-    const {games} = this.props
+    const { games, deleteGame } = this.props
     return (
       <Card.Group centered style={{padding: '10px'}}>
         {games.map(game => 
@@ -19,6 +20,12 @@ class Home extends React.Component {
               <Link to={`/games/${game.id}`}>
                 <Card.Header>{game.name}</Card.Header>
               </Link>
+            </Card.Content>
+            <Card.Content extra>
+              <Icon 
+                name='Trash'
+                onClick={ () => deleteGame(game.id)}
+              />
             </Card.Content>
           </Card>
         )}
