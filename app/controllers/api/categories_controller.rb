@@ -1,4 +1,5 @@
 class Api::CategoriesController < ApplicationController
+  before_action :set_game
   before_action :set_category, only: [:show, :update, :destroy]
 
   def index
@@ -33,6 +34,9 @@ class Api::CategoriesController < ApplicationController
   end
 
   private
+
+  def set_game
+  end
 
   def set_category
     @category = Category.find(params[:id])

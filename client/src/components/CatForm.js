@@ -17,6 +17,7 @@ class CatForm extends React.Component {
     const allCats = [{name: cat1}, {name : cat2}, {name: cat3}, {name: cat4}]
     dispatch(addCat(gameId, allCats))
     this.setState({ cat1: '', cat2: '', cat3: '', cat4: '' })
+    
   }
 
   render() {
