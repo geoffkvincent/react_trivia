@@ -12,7 +12,7 @@ class GameBoard extends React.Component {
   }
   
   renderCat = () => {
-    if (this.props.cats.length = 0) {
+    if (this.props.cats.length === 0) {
       this.setState({renderCatForm: true})
     } else {
       this.setState({renderCatForm: false})

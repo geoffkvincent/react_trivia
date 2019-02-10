@@ -16,7 +16,6 @@ export const getGames = (cb) => {
 }
 
 export const addGame = (game) => {
-  debugger
   return (dispatch) => {
     axios.post('/api/games', {game} )
     .then( ({data}) => dispatch({ type: ADD_GAME, game: data }))
@@ -31,7 +30,6 @@ export const updateGame = (game) => {
 }
 
 export const deleteGame = (id) => {
-  debugger
   return (dispatch) => {
     axios.delete(`/api/games/${id}`)
     .then( () => dispatch({ type: DELETE_GAME, id }))
@@ -43,7 +41,6 @@ export default ( state = [], action) => {
     case GAMES:
       return action.games
     case ADD_GAME:
-    debugger
       return [action.game, ...state]
     case UPDATE_GAME:
       return state.map( g => {
