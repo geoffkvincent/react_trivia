@@ -3,7 +3,8 @@ class Api::CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :update, :destroy]
 
   def index
-    render json: Category.all
+    binding.pry
+    render json: @game.categories.all
   end
 
   def show
@@ -36,6 +37,7 @@ class Api::CategoriesController < ApplicationController
   private
 
   def set_game
+    @game = Game.find(params[:game_id])
   end
 
   def set_category
