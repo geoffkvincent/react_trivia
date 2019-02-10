@@ -3,9 +3,9 @@ import axios from 'axios'
 const CATS = 'CATS'
 const ADD_CAT = 'ADD_CAT'
 
-export const getCats = () => {
+export const getCats = (id) => {
   return (dispatch) => {
-    axios.get('/api/categories')
+    axios.get(`/api/games/${id}/categories`)
     .then( res => dispatch({ type: CATS, cats: res.data }))
   }
 }
