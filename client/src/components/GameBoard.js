@@ -9,7 +9,8 @@ class GameBoard extends React.Component {
   state = {renderCatForm: false}
 
   componentDidMount() {
-    this.props.dispatch(getCats())
+    const { dispatch, game } = this.props
+    dispatch(getCats(game.id))
     this.renderCat()
   }
   
