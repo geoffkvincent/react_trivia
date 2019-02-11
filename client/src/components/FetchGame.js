@@ -1,6 +1,7 @@
 import React from 'react'
 import Home from './Home'
 import GameBoard from './GameBoard'
+import CardForm from './CardForm'
 import { getGames } from '../reducers/games'
 import { getCats } from '../reducers/categories'
 import { Switch, Route } from 'react-router-dom'
@@ -25,6 +26,7 @@ class FetchGame extends React.Component {
           <Switch>
             <Route exact path= '/' component={Home} />
             <Route exact path= '/games/:id' component={GameBoard}/>
+            <Route exact path='/gameform' component={CardForm}/>
             <Route render={() => <h1 className='text-center'>Four oh Four.</h1>} />
           </Switch>
         </Container>

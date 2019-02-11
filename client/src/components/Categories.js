@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { Card, Button } from 'semantic-ui-react'
 import Category from './Category'
@@ -25,7 +26,9 @@ class Categories extends React.Component {
         {this.props.cats.map(cat =>
         <Card key={cat.id}>
           <Card.Content textAlign='center'>
+          <Link to='/gameform'>
             <h2>{cat.name}</h2>
+          </Link>
             {renderCardsForm ? 
               <Button>Add Questions</Button>
               :
