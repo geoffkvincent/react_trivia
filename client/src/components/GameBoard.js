@@ -14,7 +14,7 @@ class GameBoard extends React.Component {
     this.catToggle()
   }
 
-  catToggle = () => this.setState({renderCatFunc: true})
+  catToggle = () => this.setState({renderCatFunc: true}, () => this.renderCat())
   
   renderCat = () => {
     if (this.props.cats.length === 0) {
@@ -22,14 +22,15 @@ class GameBoard extends React.Component {
     } else {
       this.setState({renderCatForm: false})
     }
+    this.setState({renderCatFunc: false})
   }
 
   render() {
     const { game } = this.props
     const { renderCatForm, renderCatFunc } = this.state
     return (
-      <>
-        { renderCatFunc ? this.renderCat : null }
+      <div>
+        {/* { renderCatFunc ? this.renderCat : null } */}
         <Header as='h1' textAlign='center'>{game.name}</Header>
         { renderCatForm ? <CatForm gameId={game.id}/> 
         : 
@@ -37,7 +38,7 @@ class GameBoard extends React.Component {
           <Categories cats={this.props.cats}/> 
         </Container>
         }
-      </>
+      </div>
     )
   }
 } 
