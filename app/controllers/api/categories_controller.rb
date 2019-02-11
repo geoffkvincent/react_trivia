@@ -3,7 +3,6 @@ class Api::CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :update, :destroy]
 
   def index
-    binding.pry
     render json: @game.categories.all
   end
 

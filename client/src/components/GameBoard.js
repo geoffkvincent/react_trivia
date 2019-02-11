@@ -6,13 +6,15 @@ import Categories from './Categories'
 import CatForm from './CatForm'
 
 class GameBoard extends React.Component {
-  state = {renderCatForm: false}
+  state = {renderCatForm: false, renderCatFunc: false}
 
   componentDidMount() {
     const { dispatch, game } = this.props
     dispatch(getCats(game.id))
-    this.renderCat()
+    this.catToggle()
   }
+
+  catToggle = () => this.setState({renderCatFunc: true})
   
   renderCat = () => {
     if (this.props.cats.length === 0) {

@@ -4,6 +4,7 @@ const CATS = 'CATS'
 const ADD_CAT = 'ADD_CAT'
 
 export const getCats = (id) => {
+  debugger
   return (dispatch) => {
     axios.get(`/api/games/${id}/categories`)
     .then( res => dispatch({ type: CATS, cats: res.data }))
