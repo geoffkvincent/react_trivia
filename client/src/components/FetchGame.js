@@ -12,7 +12,7 @@ class FetchGame extends React.Component {
 
   componentDidMount() {
     this.props.dispatch(getGames(this.setLoaded))
-    this.props.dispatch(getCats(this.setLoaded, gameId))
+    this.props.dispatch(getCats(this.setLoaded))
   }
 
   setLoaded = () => this.setState({loaded: true})

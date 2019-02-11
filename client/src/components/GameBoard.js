@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { getCats } from '../reducers/categories'
 import { Container, Header } from 'semantic-ui-react'
 import Categories from './Categories'
 import CatForm from './CatForm'
@@ -8,6 +9,7 @@ class GameBoard extends React.Component {
   state = {renderCatForm: false}
 
   componentDidMount() {
+    this.props.dispatch(getCats())
     this.renderCat()
   }
   
