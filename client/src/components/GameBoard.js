@@ -27,10 +27,9 @@ class GameBoard extends React.Component {
 
   render() {
     const { game } = this.props
-    const { renderCatForm, renderCatFunc } = this.state
+    const { renderCatForm } = this.state
     return (
       <div>
-        {/* { renderCatFunc ? this.renderCat : null } */}
         <Header as='h1' textAlign='center'>{game.name}</Header>
         { renderCatForm ? <CatForm gameId={game.id}/> 
         : 
